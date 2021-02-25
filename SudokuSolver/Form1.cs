@@ -28,11 +28,22 @@ namespace SudokuSolver
 
         private void bruteButton_Click(object sender, EventArgs e)
         {
+            board.BackupBoard();
             DateTime start = DateTime.Now;
             board.BruteForce();
             DateTime end = DateTime.Now;
             textBoxTimeTaken.Text = ($"Brute Force: {(end-start).TotalMilliseconds} milliseconds");
         }
 
+        private void ruleBasedButton_Click(object sender, EventArgs e)
+        {
+            board.BackupBoard();
+            board.RuleBasedSolve();
+        }
+
+        private void undoSolveButton_Click(object sender, EventArgs e)
+        {
+            board.UndoSolve();
+        }
     }
 }

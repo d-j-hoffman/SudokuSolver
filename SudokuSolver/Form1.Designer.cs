@@ -36,6 +36,8 @@ namespace SudokuSolver
             this.bruteButton = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.textBoxTimeTaken = new System.Windows.Forms.TextBox();
+            this.ruleBasedButton = new System.Windows.Forms.Button();
+            this.undoSolveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelSudoku
@@ -86,11 +88,33 @@ namespace SudokuSolver
             this.textBoxTimeTaken.Size = new System.Drawing.Size(281, 172);
             this.textBoxTimeTaken.TabIndex = 4;
             // 
+            // ruleBasedButton
+            // 
+            this.ruleBasedButton.Location = new System.Drawing.Point(24, 65);
+            this.ruleBasedButton.Name = "ruleBasedButton";
+            this.ruleBasedButton.Size = new System.Drawing.Size(281, 46);
+            this.ruleBasedButton.TabIndex = 5;
+            this.ruleBasedButton.Text = "Rule-Based Solve";
+            this.ruleBasedButton.UseVisualStyleBackColor = true;
+            this.ruleBasedButton.Click += new System.EventHandler(this.ruleBasedButton_Click);
+            // 
+            // undoSolveButton
+            // 
+            this.undoSolveButton.Location = new System.Drawing.Point(24, 117);
+            this.undoSolveButton.Name = "undoSolveButton";
+            this.undoSolveButton.Size = new System.Drawing.Size(281, 46);
+            this.undoSolveButton.TabIndex = 6;
+            this.undoSolveButton.Text = "Undo Solve";
+            this.undoSolveButton.UseVisualStyleBackColor = true;
+            this.undoSolveButton.Click += new System.EventHandler(this.undoSolveButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 477);
+            this.Controls.Add(this.undoSolveButton);
+            this.Controls.Add(this.ruleBasedButton);
             this.Controls.Add(this.textBoxTimeTaken);
             this.Controls.Add(this.bruteButton);
             this.Controls.Add(this.inputButton);
@@ -111,6 +135,8 @@ namespace SudokuSolver
         private System.Windows.Forms.Button bruteButton;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox textBoxTimeTaken;
+        private System.Windows.Forms.Button ruleBasedButton;
+        private System.Windows.Forms.Button undoSolveButton;
     }
 }
 
